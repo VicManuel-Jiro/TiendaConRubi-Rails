@@ -1,0 +1,20 @@
+<h1>Nuevo cliente</h1>
+<%= form_with(model: @cliente, id: 'formulario_clientes',url:crear_cliente_path, local: true) do |form|%>
+<%=render 'formulario',cliente: @cliente,form: form %>
+	<%end%>
+	<%= link_to 'Regresar', clientes_inicio_path %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

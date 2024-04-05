@@ -1,0 +1,35 @@
+<h1>Proveedores</h1>
+<p id="notice"><%= notice %></p>
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Apellido paterno</th>
+      <th>Apellido materno</th>
+      <th>Telefono</th>
+      <th>Correo</th>
+      <th>RFC</th>
+      <th>Direccion</th>
+      <th>Comision</th>
+      <th colspan="3"></th>
+    </tr>
+    </thead>
+    <tbody>
+    <% @proveedores.each do |proveedor| %>
+    <tr>
+    	<th><%=proveedor.nombre%></th>
+      	<th><%=proveedor.paterno%></th> 
+      	<th><%=proveedor.materno%></th>
+        <th><%=proveedor.telefono%></th>
+        <th><%=proveedor.correo%></th>
+        <th><%=proveedor.rfc%></th>
+        <th><%=proveedor.direccion%></th>
+        <th><%=proveedor.comision%></th>
+        <td><%= link_to 'Mostrar',mostrar_proveedor_path(proveedor.id)%></td>
+        <td><%= link_to 'Editar',editar_proveedor_path(proveedor.id)%></td>
+        <td><%= link_to 'Eliminar',eliminar_proveedor_path(proveedor.id),method: :delete, data:{confirm: 'Estas seguro de eliminar?'}%></td>
+    </tr>
+    <%end%>
+    </tbody>
+</table>
+<%= link_to 'Nuevo Proveedor', nuevo_proveedor_path %>

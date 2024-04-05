@@ -1,0 +1,18 @@
+<h1>Consultar estado</h1>
+
+<table>
+    <tr>
+      <th>Nombre</th>
+      <td><%=@estado.nombre %></td>
+    </tr>
+    <tr>
+    	<th>Descripcion</th>
+      	<td><%=@estado.descripcion%></td>
+    </tr>
+    <tr>
+      <th>Pais</th>
+        <td><%=@estado.pais.nombre%></td>
+    </tr>
+</table>
+<%= link_to 'Editar', editar_estado_path(@estado.id)%> |
+<%= link_to 'Regresar', estados_inicio_path %>

@@ -1,0 +1,26 @@
+<h1>Estados</h1>
+<p id="notice"><%= notice %></p>
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Descripcion</th>
+      <th>Pais</th>
+      <th colspan="3"></th>
+    </tr>
+    </thead>
+    <tbody>
+    <% @estados.each do |estado| %>
+    <tr>
+    	<th><%=estado.nombre%></th>
+      	<th><%=estado.descripcion%></th> 
+      	<th><%=estado.pais.nombre%></th>
+      	<td><%= link_to 'Mostrar',mostrar_estado_path(estado.id)%></td>
+        <td><%= link_to 'Editar',editar_estado_path(estado.id)%></td>
+        <td><%= link_to 'Eliminar',eliminar_estado_path(estado.id),method: :delete, data:{confirm: 'Estas seguro de eliminar?'}%></td>
+    </tr>
+    <%end%>
+    </tbody>
+</table>
+
+<%= link_to 'Nuevo Estado', nuevo_estado_path %>

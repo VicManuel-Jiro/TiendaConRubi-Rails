@@ -1,0 +1,6 @@
+<h1>Editar Estado</h1>
+<%= form_with(model: @estado,id: 'formulario_estados',url: actualizar_estado_path,local: true) do |form|%>
+	<%=render 'formulario',estado: @estado,form: form %>
+<%end%>
+<%= link_to 'Mostrar', mostrar_estado_path%> |
+<%= link_to 'Regresar', estados_inicio_path %>

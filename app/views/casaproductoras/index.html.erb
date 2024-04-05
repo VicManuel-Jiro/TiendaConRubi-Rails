@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Casas productoras</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Fundador</th>
+      <th>Ceo</th>
+      <th>Sitio</th>
+      <th>Telefono</th>
+      <th>Atencion clientes</th>
+      <th>Sede</th>
+      <th>Twitter</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @casaproductoras.each do |casaproductora| %>
+      <tr>
+        <td><%= casaproductora.nombre %></td>
+        <td><%= casaproductora.fundador %></td>
+        <td><%= casaproductora.ceo %></td>
+        <td><%= casaproductora.sitio %></td>
+        <td><%= casaproductora.telefono %></td>
+        <td><%= casaproductora.atencion_clientes %></td>
+        <td><%= casaproductora.sede %></td>
+        <td><%= casaproductora.twitter %></td>
+        <td><%= link_to 'Mostrar', casaproductora %></td>
+        <td><%= link_to 'Editar', edit_casaproductora_path(casaproductora) %></td>
+        <td><%= link_to 'Eliminar', casaproductora, method: :delete, data: { confirm: 'estas seguro?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Nueva Casa productora', new_casaproductora_path %>

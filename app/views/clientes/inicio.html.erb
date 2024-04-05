@@ -1,0 +1,41 @@
+<h1>Clientes</h1>
+<p id="notice"><%= notice %></p>
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Paterno</th>
+      <th>Materno</th>
+      <th>Telefono</th>
+      <th>Correo</th>
+      <th>Estado</th>
+      <th>Codigo postal</th>
+      <th>Calle</th>
+      <th>Numero</th>
+      <th>RFC</th>
+      <th colspan="3"></th>
+    </tr>
+    </thead>
+    <tbody>
+    <% @clientes.each do |cliente| %>
+    <tr>
+    	<th><%=cliente.nombre%></th>
+      <th><%=cliente.paterno%></th>
+      <th><%=cliente.materno%></th>
+      <th><%=cliente.telefono%></th>
+      <th><%=cliente.correo%></th>
+      	<th><%=cliente.estado.nombre%></th>
+        <th><%=cliente.cp%></th>
+        <th><%=cliente.nombre%></th>
+        <th><%=cliente.calle%></th>
+        <th><%=cliente.numero%></th>
+        <th><%=cliente.rfc%></th>
+      	<td><%= link_to 'Mostrar',mostrar_cliente_path(cliente.id)%></td>
+        <td><%= link_to 'Editar',editar_cliente_path(cliente.id)%></td>
+        <td><%= link_to 'Eliminar',eliminar_cliente_path(cliente.id),method: :delete, data:{confirm: 'Estas seguro de eliminar?'}%></td>
+    </tr>
+    <%end%>
+    </tbody>
+</table>
+
+<%= link_to 'Nuevo Cliente', nuevo_cliente_path %>

@@ -1,0 +1,62 @@
+<%= form_with(model: usuario, id: 'formulario_usuarios', local: true) do |form| %>
+  <% if usuario.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(usuario.errors.count, "error") %> prohibited this usuario from being saved:</h2>
+      <ul>
+      <% usuario.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="form-group">
+    <label for="rfc">RFC: </label>
+    <%= form.text_field :rfc, :class => "form-control" %>
+    <%= form.hidden_field :id %>
+  </div>
+  <div class="form-group">
+    <label for="curp">CURP: </label>
+    <%= form.text_field :curp, :class => "form-control" %>
+  </div>
+  <div class="form-group">
+    <label for="nombre">Nombre: </label>
+    <%= form.text_field :nombre, :class => "form-control" %>
+  </div>
+  <div class="form-group">
+    <label for="paterno">Apellido paterno: </label>
+    <%= form.text_field :paterno, :class => "form-control" %>
+  </div>
+  <div class="form-group">
+    <label for="materno">Apellido materno: </label>
+    <%= form.text_field :materno, :class => "form-control" %>
+  </div>
+  <div class="form-group">
+    <label for="sexo">Sexo: </label>
+    <%=form.radio_button :sexo,'F',:checked => true%>Femenino
+    <%=form.radio_button :sexo,'M'%>Masculino
+  </div>
+  <div class="form-group">
+    <label for="telefono">Telefono: </label>
+    <%= form.text_field :telefono, :class => "form-control" %>
+  </div>
+  <div class="form-group">
+    <label for="correo">Correo: </label>
+    <%= form.text_field :correo, :class => "form-control" %>
+  </div>
+    <div class="form-group">
+    <label for="login">Login: </label>
+    <%= form.text_field :login, :class => "form-control" %>
+  </div>
+  <div class="form-group">
+    <label for="password">Password: </label>
+    <%= form.password_field :password, :class => "form-control" %>
+  </div>
+  <div class="form-group">
+    <label for="estado_id">Estado: </label>
+    <%= form.select :estado_id,@estados.collect{|e| [e.nombre,e.id]},{include_blank: "Selecciona uno"} %>
+  </div>
+
+ <div class="form-group"> <!-- Submit Button -->
+        <button type="submit" class="btn btn-primary">Guardar</button>
+    </div>
+<% end %>

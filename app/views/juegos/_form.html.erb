@@ -1,0 +1,64 @@
+<%= form_with(model: juego,id: 'fromulario_juegos' local: true) do |form| %>
+  <% if juego.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(juego.errors.count, "error") %> prohibited this juego from being saved:</h2>
+
+      <ul>
+      <% juego.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<div class="form-group">
+    <label for="titulo">Titulo: </label>
+    <%= form.text_field :titulo, :class => "form-control" %>
+    <%= form.hidden_field :id %>
+  </div>
+  <div class="form-group">
+    <label for="plataforma_id">Plataforma: </label>
+    <%= form.select :plataforma_id,@plataforma.collect{|e| [e.nombre,e.id]},{include_blank: "Seleccione"} %>
+  </div>
+  <div class="form-group">
+    <label for="consola_id">Consola: </label>
+    <%= form.select :consola_id,@consola.collect{|e| [e.nombre,e.id]},{include_blank: "Seleccione"} %>
+  </div>
+<div class="form-group">
+    <label for="edicion">Edicion: </label>
+    <%= form.text_field :edicion, :class => "form-control" %>
+  </div>
+<div class="form-group">
+    <label for="genero">Genero: </label>
+    <%= form.text_field :genero, :class => "form-control" %>
+  </div>
+<div class="form-group">
+    <label for="clasificacion">Clasificacion (Ej. M / E / M+): </label>
+    <%= form.text_field :clasificacion, :class => "form-control" %>
+  </div>
+
+<div class="form-group">
+    <label for="casa_productora_id">Casa productora: </label>
+    <%= form.select :casa_productora_id,@casaproductora.collect{|e| [e.nombre,e.id]},{include_blank: "Seleccione"} %>
+  </div>
+<div class="form-group">
+    <label for="existencia">Existencia: </label>
+    <%= form.text_field :existencia, :class => "form-control" %>
+  </div>
+  <div class="form-group">
+    <label for="precio">Precio: </label>
+    <%= form.text_field :precio, :class => "form-control" %>
+  </div>
+  <div class="form-group">
+    <label for="descuento">Descuento: </label>
+    <%= form.text_field :descuento, :class => "form-control" %>
+  </div>
+<div class="form-group">
+    <label for="codigo_barras">Codigo de barras: </label>
+    <%= form.text_field :codigo_barras, :class => "form-control" %>
+  </div>
+
+  <div class="form-group"> <!-- Submit Button -->
+        <button type="submit" class="btn btn-primary">Guardar</button>
+    </div>
+<% end %>

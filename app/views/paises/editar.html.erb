@@ -1,0 +1,6 @@
+<h1>Editar Pais</h1>
+<%= form_with(model: @pais,id: 'formulario_paises',url: actualizar_pais_path,local: true) do |form|%>
+	<%=render 'formulario',pais: @pais,form: form %>
+<%end%>
+<%= link_to 'Mostrar', mostrar_pais_path%> |
+<%= link_to 'Regresar', paises_inicio_path %>

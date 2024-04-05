@@ -1,0 +1,5 @@
+<h1>Nueva Plataforma</h1>
+<%= form_with(model: @plataforma, id: 'formulario_plataformas',url:crear_plataforma_path, local: true) do |form|%>
+<%=render 'formulario',plataforma: @plataforma,form: form %>
+	<%end%>
+	<%= link_to 'Regresar', plataformas_inicio_path %>

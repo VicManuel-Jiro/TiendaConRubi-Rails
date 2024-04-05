@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Juegos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Titulo</th>
+      <th>Plataforma</th>
+      <th>Consola</th>
+      <th>Edicion</th>
+      <th>Genero</th>
+      <th>Clasificacion</th>
+      <th>Casa productora</th>
+      <th>Existencia</th>
+      <th>Precio</th>
+      <th>Descuento</th>
+      <th>Codigo barras</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @juegos.each do |juego| %>
+      <tr>
+        <td><%= juego.titulo %></td>
+        <td><%= juego.plataforma.nombre %></td>
+        <td><%= juego.consola.nombre %></td>
+        <td><%= juego.edicion %></td>
+        <td><%= juego.genero %></td>
+        <td><%= juego.clasificacion %></td>
+        <td><%= juego.casa_productora_id %></td>
+        <td><%= juego.existencia %></td>
+        <td><%= juego.precio %></td>
+        <td><%= juego.descuento %></td>
+        <td><%= juego.codigo_barras %></td>
+        <td><%= link_to 'Mostrar', juego %></td>
+        <td><%= link_to 'Editar', edit_juego_path(juego) %></td>
+        <td><%= link_to 'Eliminar', juego, method: :delete, data: { confirm: 'Estas seguro?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Nuevo Juego', new_juego_path %>

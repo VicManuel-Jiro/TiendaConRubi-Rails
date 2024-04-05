@@ -1,0 +1,50 @@
+<%= form_with(model: casaproductora,id: 'formulario_casaproductoras', local: true) do |form| %>
+  <% if casaproductora.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(casaproductora.errors.count, "error") %> prohibited this casaproductora from being saved:</h2>
+
+      <ul>
+      <% casaproductora.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <label for="nombre">Nombre: </label>
+    <%= form.text_field :nombre, :class => "form-control" %>
+    <%=form.hidden_field :id%>
+  </div>
+  <div class="form-group">
+    <label for="fundador">Fundador: </label>
+    <%= form.text_field :fundador, :class => "form-control" %>
+  </div>
+  <div class="form-group">
+    <label for="ceo">CEO: </label>
+    <%= form.text_field :ceo, :class => "form-control" %>
+  </div>
+    <div class="form-group">
+    <label for="sitio">Sitio web: </label>
+    <%= form.text_field :sitio, :class => "form-control" %>
+  </div>
+  <div class="form-group">
+    <label for="telefono">Telefono: </label>
+    <%= form.text_field :telefono, :class => "form-control" %>
+  </div>
+  <div class="form-group">
+    <label for="atencion_clientes">Atencion a clientes: </label>
+    <%= form.text_field :atencion_clientes, :class => "form-control" %>
+  </div>
+  <div class="form-group">
+    <label for="sede">Sede principal: </label>
+    <%= form.text_field :sede, :class => "form-control" %>
+  </div>
+  <div class="form-group">
+    <label for="twitter">Twitter: </label>
+    <%= form.text_field :twitter, :class => "form-control" %>
+  </div>
+ <div class="form-group"> <!-- Submit Button -->
+        <button type="submit" class="btn btn-primary">Guardar</button>
+    </div>
+<% end %>

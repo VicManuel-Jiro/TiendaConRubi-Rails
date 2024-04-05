@@ -1,0 +1,42 @@
+
+<header id="menu_navegador">
+	<div class="bienvenido"><strong>Usuario: </strong><%=session[:nombre]%> &nbsp; <%=link_to'Salir',cerrar_sesion_path%></div>
+	<!-- start nav -->
+<nav id="menu">
+<!-- start menu -->
+<ul>
+ <li><%= link_to 'Pedidos pendientes', pedidos_path%></li>
+ <li><a href="#">Inventario</a>
+<!-- start menu desplegable -->
+ <ul>
+ <li><%= link_to 'Juegos', juegos_path%></li>
+ <li><%= link_to 'Consolas', consolas_path%></li>
+ <li><%= link_to 'Productos varios', productos_path%></li>
+
+ </ul>
+<!-- end menu desplegable -->
+ </li>
+ <li><a href="#">Otros</a>
+<ul>
+	<li><%= link_to 'Paises', paises_inicio_path%></li>
+	<li><%= link_to 'Estados', estados_inicio_path%></li>
+	<li><%= link_to 'Usuarios', usuarios_path%></li>
+	<li><%= link_to 'Clientes', clientes_inicio_path%></li>
+	<li><%= link_to 'plataformas', plataformas_inicio_path%></li>
+	<li><%= link_to 'Proveedores', proveedores_inicio_path%></li>
+	<li><%= link_to 'Sucursales', sucursales_inicio_path%></li>
+	<li><%= link_to 'Casas productoras', casaproductoras_path%></li>
+	</ul>
+</li>
+<li><%= link_to 'Inicio', inicio_path%></li>
+</ul>
+<!-- end menu -->
+</nav>
+<!-- end nav -->
+
+	
+	
+
+
+
+</header>

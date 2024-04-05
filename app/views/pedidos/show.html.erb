@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Cliente:</strong>
+  <%= @pedido.cliente.nombre %>
+</p>
+
+<p>
+  <strong>Total:</strong>
+  <%= @pedido.total %>
+</p>
+
+<p>
+  <strong>Descuento:</strong>
+  <%= @pedido.descuento %>
+</p>
+
+<p>
+  <strong>Cp:</strong>
+  <%= @pedido.cp %>
+</p>
+
+<p>
+  <strong>Calle:</strong>
+  <%= @pedido.calle %>
+</p>
+
+<p>
+  <strong>Numero:</strong>
+  <%= @pedido.numero %>
+</p>
+
+<p>
+  <strong>Sucursal:</strong>
+  <%= @pedido.sucursal.nombre %>
+</p>
+
+<p>
+  <strong>Urgencia:</strong>
+  <%= @pedido.urgencia %>
+</p>
+
+<%= link_to 'Editar', edit_pedido_path(@pedido) %> |
+<%= link_to 'Regresar', pedidos_path %>

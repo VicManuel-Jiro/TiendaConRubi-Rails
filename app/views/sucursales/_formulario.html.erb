@@ -1,0 +1,24 @@
+<div class="form-group">
+    <label for="nombre">Nombre: </label>
+    <%= form.text_field :nombre, :class => "form-control" %>
+    <%=form.hidden_field :id%>
+  </div>
+  <div class="form-group">
+    <label for="estado_id">Estado: </label>
+    <%= form.select :estado_id,@estados.collect{|e| [e.nombre,e.id]},{include_blank: "Seleccione"} %>
+  </div>
+  <div class="form-group">
+    <label for="calle">Calle: </label>
+    <%= form.text_field :calle, :class => "form-control" %>
+  </div>
+  <div class="form-group">
+    <label for="numero">Numero: </label>
+    <%= form.text_field :numero, :class => "form-control" %>
+  </div>
+    <div class="form-group">
+    <label for="no_identificador">Numero de identificacion: </label>
+    <%= form.text_field :no_identificador, :class => "form-control" %>
+  </div>
+ <div class="form-group"> <!-- Submit Button -->
+        <button type="submit" class="btn btn-primary">Guardar</button>
+    </div>

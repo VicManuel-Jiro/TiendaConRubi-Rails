@@ -1,0 +1,41 @@
+<h1>Crear pedido</h1>
+<%if !@productos.nil?%>
+	<%@codigo=@productos.codigo_barras%>
+	<%@objeto=@productos.precio%>
+	<p>
+  		<strong>Producto:</strong>
+ 		<%= @productos.nombre %>
+	</p>
+	<p>
+  		<strong>Codigo de barras:</strong>
+ 		<%= @productos.codigo_barras %>
+	</p>
+<%end%>
+<%if !@juegos.nil?%>
+	<%@codigo=@juegos.codigo_barras%>
+	<%@objeto=@juegos.precio%>
+	<p>
+  		<strong>Juego:</strong>
+ 		<%= @juegos.titulo %>
+	</p>
+	<p>
+  		<strong>Codigo de barras:</strong>
+ 		<%= @juegos.codigo_barras %>
+	</p>
+<%end%>
+<%if !@consolas.nil?%>
+	<%@codigo=@consolas.codigo_barras%>
+	<%@objeto=@consolas.precio%>
+	<p>
+  		<strong>Consola:</strong>
+ 		<%= @consolas.nombre %>
+	</p>
+	<p>
+  		<strong>Codigo de barras:</strong>
+ 		<%= @consolas.codigo_barras %>
+	</p>
+<%end%>
+<%= form_with(model: @pedido,id: 'formulario_pedidos',url: crear_pedido_path(@codigo),local: true) do |form|%>
+	<%=render 'formulario',pedido: @pedido,form: form %>
+<%end%>
+<%= link_to 'Regresar', inicio_path %>

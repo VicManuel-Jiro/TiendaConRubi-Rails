@@ -1,0 +1,37 @@
+<h1>Consultar proveedor</h1>
+<table>
+    <tr>
+      <th>Nombre</th>
+      <td><%=@proveedor.nombre %></td>
+    </tr>
+    <tr>
+    	<th>Apellido paterno</th>
+      	<td><%=@proveedor.paterno%></td>
+    </tr>
+    <tr>
+      <th>Apellido Materno</th>
+        <td><%=@proveedor.materno%></td>
+    </tr>
+    <tr>
+      <th>RFC</th>
+        <td><%=@proveedor.rfc%></td>
+    </tr>
+    <tr>
+      <th>Telefono</th>
+        <td><%=@proveedor.telefono%></td>
+    </tr>
+    <tr>
+      <th>Correo</th>
+        <td><%=@proveedor.correo%></td>
+    </tr>
+    <tr>
+      <th>Direccion</th>
+        <td><%=@proveedor.direccion%></td>
+    </tr>
+    <tr>
+      <th>Comision</th>
+        <td><%=@proveedor.comision%></td>
+    </tr>
+</table>
+<%= link_to 'Editar', editar_proveedor_path(@proveedor.id)%> |
+<%= link_to 'Regresar', proveedores_inicio_path %>

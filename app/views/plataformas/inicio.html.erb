@@ -1,0 +1,37 @@
+<h1>Plataformas</h1>
+<p id="notice"><%= notice %></p>
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Nombre de empresa</th>
+      <th>Tipo de empresa</th>
+      <th>Tipo de negocio</th>
+      <th>Tipo de dispositivo</th>
+      <th>Sitio</th>
+      <th>Fundador</th>
+      <th>Sede</th>
+      <th>CEO</th>
+      <th colspan="3"></th>
+    </tr>
+    </thead>
+    <tbody>
+    <% @plataformas.each do |plataforma| %>
+    <tr>
+    	<th><%=plataforma.nombre%></th>
+      	<th><%=plataforma.empresa%></th> 
+      	<th><%=plataforma.tipo_empresa%></th>
+        <th><%=plataforma.tipo%></th>
+        <th><%=plataforma.tipo_dispositivo%></th>
+        <th><%=plataforma.sitio%></th>
+        <th><%=plataforma.fundador%></th>
+        <th><%=plataforma.sede%></th>
+        <th><%=plataforma.ceo%></th>
+        <td><%= link_to 'Mostrar',mostrar_plataforma_path(plataforma.id)%></td>
+        <td><%= link_to 'Editar',editar_plataforma_path(plataforma.id)%></td>
+        <td><%= link_to 'Eliminar',eliminar_plataforma_path(plataforma.id),method: :delete, data:{confirm: 'Estas seguro de eliminar?'}%></td>
+    </tr>
+    <%end%>
+    </tbody>
+</table>
+<%= link_to 'Nueva Plataforma', nuevo_plataforma_path %>

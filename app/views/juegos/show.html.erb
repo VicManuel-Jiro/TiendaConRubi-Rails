@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Titulo:</strong>
+  <%= @juego.titulo %>
+</p>
+
+<p>
+  <strong>Plataforma:</strong>
+  <%= @juego.plataforma.nombre %>
+</p>
+
+<p>
+  <strong>Consola:</strong>
+  <%= @juego.consola.nombre %>
+</p>
+
+<p>
+  <strong>Edicion:</strong>
+  <%= @juego.edicion %>
+</p>
+
+<p>
+  <strong>Genero:</strong>
+  <%= @juego.genero %>
+</p>
+
+<p>
+  <strong>Clasificacion:</strong>
+  <%= @juego.clasificacion %>
+</p>
+
+<p>
+  <strong>Casa productora:</strong>
+  <%= @juego.casa_productora_id %>
+</p>
+
+<p>
+  <strong>Existencia:</strong>
+  <%= @juego.existencia %>
+</p>
+
+<p>
+  <strong>Precio:</strong>
+  <%= @juego.precio %>
+</p>
+
+<p>
+  <strong>Descuento:</strong>
+  <%= @juego.descuento %>
+</p>
+
+<p>
+  <strong>Codigo barras:</strong>
+  <%= @juego.codigo_barras %>
+</p>
+
+<%= link_to 'Editar', edit_juego_path(@juego) %> |
+<%= link_to 'Regresar', juegos_path %>

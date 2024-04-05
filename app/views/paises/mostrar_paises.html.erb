@@ -1,0 +1,14 @@
+<h1>Consultar pais</h1>
+
+<table>
+    <tr>
+      <th>Nombre</th>
+      <td><%=@pais.nombre %></td>
+    </tr>
+    <tr>
+    	<th>Descripcion</th>
+      	<td><%=@pais.descripcion%></td>
+    </tr>
+</table>
+<%= link_to 'Editar', editar_pais_path(@pais.id)%> |
+<%= link_to 'Regresar', paises_inicio_path %>

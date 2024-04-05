@@ -1,0 +1,41 @@
+<h1>Consultar plataforma</h1>
+<table>
+    <tr>
+      <th>Nombre</th>
+      <td><%=@plataforma.nombre %></td>
+    </tr>
+    <tr>
+    	<th>Nombre de la empresa </th>
+      	<td><%=@plataforma.empresa%></td>
+    </tr>
+    <tr>
+      <th>Tipo de empresa</th>
+        <td><%=@plataforma.tipo_empresa%></td>
+    </tr>
+    <tr>
+      <th>Tipo de negocio</th>
+        <td><%=@plataforma.tipo%></td>
+    </tr>
+    <tr>
+      <th>Tipo de dispositivo</th>
+        <td><%=@plataforma.tipo_dispositivo%></td>
+    </tr>
+    <tr>
+      <th>Sitio web</th>
+        <td><%=@plataforma.sitio%></td>
+    </tr>
+    <tr>
+      <th>Fundador</th>
+        <td><%=@plataforma.fundador%></td>
+    </tr>
+    <tr>
+      <th>Sede principal</th>
+        <td><%=@plataforma.sede%></td>
+    </tr>
+    <tr>
+      <th>CEO</th>
+        <td><%=@plataforma.sede%></td>
+    </tr>
+</table>
+<%= link_to 'Editar', editar_plataforma_path(@plataforma.id)%> |
+<%= link_to 'Regresar', plataformas_inicio_path %>

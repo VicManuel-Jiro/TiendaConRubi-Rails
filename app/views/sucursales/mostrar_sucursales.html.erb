@@ -1,0 +1,25 @@
+<h1>Consultar sucursal</h1>
+<table>
+    <tr>
+      <th>Nombre</th>
+      <td><%=@sucursal.nombre %></td>
+    </tr>
+    <tr>
+    	<th>Estado</th>
+      	<td><%=@sucursal.estado.nombre%></td>
+    </tr>
+    <tr>
+      <th>Calle</th>
+        <td><%=@sucursal.calle%></td>
+    </tr>
+    <tr>
+      <th>Numero</th>
+        <td><%=@sucursal.numero%></td>
+    </tr>
+    <tr>
+      <th>Numero de identificacion</th>
+        <td><%=@sucursal.no_identificador%></td>
+    </tr>
+</table>
+<%= link_to 'Editar', editar_sucursal_path(@sucursal.id)%> |
+<%= link_to 'Regresar', sucursales_inicio_path %>

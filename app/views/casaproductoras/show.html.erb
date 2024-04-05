@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @casaproductora.nombre %>
+</p>
+
+<p>
+  <strong>Fundador:</strong>
+  <%= @casaproductora.fundador %>
+</p>
+
+<p>
+  <strong>Ceo:</strong>
+  <%= @casaproductora.ceo %>
+</p>
+
+<p>
+  <strong>Sitio:</strong>
+  <%= @casaproductora.sitio %>
+</p>
+
+<p>
+  <strong>Telefono:</strong>
+  <%= @casaproductora.telefono %>
+</p>
+
+<p>
+  <strong>Atencion clientes:</strong>
+  <%= @casaproductora.atencion_clientes %>
+</p>
+
+<p>
+  <strong>Sede:</strong>
+  <%= @casaproductora.sede %>
+</p>
+
+<p>
+  <strong>Twitter:</strong>
+  <%= @casaproductora.twitter %>
+</p>
+
+<%= link_to 'Editar', edit_casaproductora_path(@casaproductora) %> |
+<%= link_to 'Regresar', casaproductoras_path %>

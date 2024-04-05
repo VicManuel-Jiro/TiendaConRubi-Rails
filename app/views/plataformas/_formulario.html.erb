@@ -1,0 +1,40 @@
+<div class="form-group">
+    <label for="nombre">Nombre: </label>
+    <%= form.text_field :nombre, :class => "form-control" %>
+    <%=form.hidden_field :id%>
+  </div>
+  <div class="form-group">
+    <label for="empresa">Nombre de la empresa: </label>
+    <%= form.text_field :empresa, :class => "form-control" %>
+  </div>
+  <div class="form-group">
+    <label for="tipo_empresa">Tipo de empresa: </label>
+    <%= form.text_field :tipo_empresa, :class => "form-control" %>
+  </div>
+    <div class="form-group">
+    <label for="tipo">Tipo de negocio: </label>
+    <%= form.text_field :tipo, :class => "form-control" %>
+  </div>
+  <div class="form-group">
+    <label for="tipo_dispositivo">Tipo de dispositivo: </label>
+    <%= form.text_field :tipo_dispositivo, :class => "form-control" %>
+  </div>
+  <div class="form-group">
+    <label for="sitio">Sitio web: </label>
+    <%= form.text_field :sitio, :class => "form-control" %>
+  </div>
+  <div class="form-group">
+    <label for="fundador">Fundador de la empresa: </label>
+    <%= form.text_field :fundador, :class => "form-control" %>
+  </div>
+  <div class="form-group">
+    <label for="sede">Sede principal: </label>
+    <%= form.text_field :sede, :class => "form-control" %>
+  </div>
+  <div class="form-group">
+    <label for="ceo">CEO de la empresa: </label>
+    <%= form.text_field :ceo, :class => "form-control" %>
+  </div>
+ <div class="form-group"> <!-- Submit Button -->
+        <button type="submit" class="btn btn-primary">Guardar</button>
+    </div>

@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nombre: MyString
+  plataforma_id: 
+  color: MyString
+  edicion: MyString
+  capacidad: 
+  existencia: 
+  precio: 9.99
+  descuento: 
+  codigo_barras: MyString
+
+two:
+  nombre: MyString
+  plataforma_id: 
+  color: MyString
+  edicion: MyString
+  capacidad: 
+  existencia: 
+  precio: 9.99
+  descuento: 
+  codigo_barras: MyString

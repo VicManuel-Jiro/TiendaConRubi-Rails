@@ -1,0 +1,6 @@
+<h1>Editar Plataforma</h1>
+<%= form_with(model: @plataforma,id: 'formulario_plataformas',url: actualizar_plataforma_path,local: true) do |form|%>
+	<%=render 'formulario',plataforma: @plataforma,form: form %>
+<%end%>
+<%= link_to 'Mostrar', mostrar_plataforma_path%> |
+<%= link_to 'Regresar', plataformas_inicio_path %>

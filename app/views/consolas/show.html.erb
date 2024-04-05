@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @consola.nombre %>
+</p>
+
+<p>
+  <strong>Plataforma:</strong>
+  <%= @consola.plataforma.nombre %>
+</p>
+
+<p>
+  <strong>Color:</strong>
+  <%= @consola.color %>
+</p>
+
+<p>
+  <strong>Edicion:</strong>
+  <%= @consola.edicion %>
+</p>
+
+<p>
+  <strong>Capacidad:</strong>
+  <%= @consola.capacidad %>
+</p>
+
+<p>
+  <strong>Existencia:</strong>
+  <%= @consola.existencia %>
+</p>
+
+<p>
+  <strong>Precio:</strong>
+  <%= @consola.precio %>
+</p>
+
+<p>
+  <strong>Descuento:</strong>
+  <%= @consola.descuento %>
+</p>
+
+<p>
+  <strong>Codigo barras:</strong>
+  <%= @consola.codigo_barras %>
+</p>
+
+<%= link_to 'Editar', edit_consola_path(@consola) %> |
+<%= link_to 'Regresar', consolas_path %>

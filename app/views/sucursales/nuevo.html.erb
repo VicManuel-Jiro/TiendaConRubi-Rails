@@ -1,0 +1,5 @@
+<h1>Nueva Sucursal</h1>
+<%= form_with(model: @sucursal, id: 'formulario_sucursales',url:crear_sucursal_path, local: true) do |form|%>
+<%=render 'formulario',sucursal: @sucursal,form: form %>
+	<%end%>
+	<%= link_to 'Regresar', sucursales_inicio_path %>

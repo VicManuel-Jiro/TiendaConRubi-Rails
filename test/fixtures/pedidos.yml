@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cliente_id: 
+  total: 9.99
+  descuento: 
+  cp: 
+  calle: MyString
+  numero: 
+  sucursal_id: 
+  urgencia: MyString
+
+two:
+  cliente_id: 
+  total: 9.99
+  descuento: 
+  cp: 
+  calle: MyString
+  numero: 
+  sucursal_id: 
+  urgencia: MyString

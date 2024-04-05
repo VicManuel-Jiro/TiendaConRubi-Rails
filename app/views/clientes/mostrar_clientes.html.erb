@@ -1,0 +1,46 @@
+<h1>Consultar cliente</h1>
+
+<table>
+    <tr>
+      <th>Nombre</th>
+      <td><%=@cliente.nombre %></td>
+    </tr>
+    <tr>
+      <th>Apellido paterno</th>
+      <td><%=@cliente.paterno %></td>
+    </tr>
+    <tr>
+    	<th>Apellido materno</th>
+      	<td><%=@cliente.materno%></td>
+    </tr>
+    <tr>
+      <th>Telefono</th>
+      <td><%=@cliente.telefono %></td>
+    </tr>
+    <tr>
+      <th>Correo</th>
+      <td><%=@cliente.correo %></td>
+    </tr>
+    <tr>
+      <th>Estado</th>
+        <td><%=@cliente.estado.nombre%></td>
+    </tr>
+    <tr>
+      <th>Codigo postal</th>
+      <td><%=@cliente.cp %></td>
+    </tr>
+    <tr>
+      <th>Calle</th>
+      <td><%=@cliente.calle %></td>
+    </tr>
+    <tr>
+      <th>Numero</th>
+      <td><%=@cliente.numero %></td>
+    </tr>
+    <tr>
+      <th>RFC</th>
+      <td><%=@cliente.rfc %></td>
+    </tr>
+</table>
+<%= link_to 'Editar', editar_cliente_path(@cliente.id)%> |
+<%= link_to 'Regresar', clientes_inicio_path %>

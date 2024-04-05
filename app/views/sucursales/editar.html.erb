@@ -1,0 +1,6 @@
+<h1>Editar Sucursales</h1>
+<%= form_with(model: @sucursal,id: 'formulario_sucursales',url: actualizar_sucursal_path,local: true) do |form|%>
+	<%=render 'formulario',sucursal: @sucursal,form: form %>
+<%end%>
+<%= link_to 'Mostrar', mostrar_sucursal_path%> |
+<%= link_to 'Regresar', sucursales_inicio_path %>
